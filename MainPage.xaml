@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF_CollectinViewBasico.MainPage">
+    <StackLayout BackgroundColor="AntiqueWhite">
+        <Image Source="https://www.viajoteca.com/wp-content/uploads/2020/09/Museu-do-Louvre.jpg" HorizontalOptions="Fill"  WidthRequest="800" HeightRequest="350"  />
+        <Frame BackgroundColor="Black" Padding="10" CornerRadius="0">
+            <Label Text="Bem vindo ao Museu do Louvre" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontAttributes="Italic"/>
+        </Frame>
+   
+    <StackLayout BackgroundColor="AntiqueWhite">           
+        <Label Text="Conheça o museu com a companhia de um Guia." FontSize="Title" Padding="30,5,10,10" HorizontalOptions="Start"/>
+        <Label Text="Descubra a Mona Lisa, a Vitória Alada de Samotrácia, a Vênus de Milo e outras obras-primas do Louvre com guias treinados que o levam pelos espaços mais impressionantes do museu, como o fosso medieval, dando-lhe uma visão fascinante da história do Palácio." FontSize="16" Padding="30,0,500,0"/>
+        <Label Text="fonte: https://www.louvre.fr/en" FontAttributes="Italic" FontSize="9" Padding="30,1,4,5"/>
+       
+        <Label Padding="30,2,10,10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Compre seu ingresso para a visita ao museu " LineHeight="2"   />
+                    <Span Text="clicando aqui."
+                  TextColor="LightSeaGreen"
+                  TextDecorations="Underline" FontAttributes="Bold">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/home" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Grid Padding="30,2,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="PressMeButton"
+                                Text="Obrigada pelo seu interesse no museu. Clique aqui caso tenha gostado da experiência."
+                                Pressed="PressMeButton_Pressed"
+                                Clicked="PressMeButton_Clicked"/>
+        </Grid>       
+    </StackLayout>
+   </StackLayout>
+</ContentPage>
