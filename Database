@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using A6LP2;
-using App1;
+using Teste2;
 using SQLite;
+using App1;
 
 namespace LocalDatabaseTutorial
 {
@@ -14,6 +15,6 @@ namespace LocalDatabaseTutorial
             _database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
             _database.CreateTableAsync<Botao>().Wait();
         }
-                
+
     }
 }
