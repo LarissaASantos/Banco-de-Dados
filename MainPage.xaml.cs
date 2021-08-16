@@ -1,12 +1,13 @@
-using App1;
 using System;
+using System.Collections.Generic;
+using Teste2;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using XF_CollectinViewBasico.ViewModels;
+using App1;
 
 namespace XF_CollectinViewBasico
 {
