@@ -1,0 +1,20 @@
+using NuGet.Common;
+using SQLite;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace App1
+{
+    public class TodoItemDatabase
+    {
+        static SQLiteAsyncConnection Database;
+
+        public static readonly AsyncLazy<TodoItemDatabase> Instance = new AsyncLazy<TodoItemDatabase>(async () =>
+        {
+            var instance = new TodoItemDatabase();
+            CreateTableResult result = await Database.CreateTableAsync<TodoItemDatabase>();
+            return instance;
+        });
+    }
+}
